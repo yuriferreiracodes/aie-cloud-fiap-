@@ -1,7 +1,10 @@
 # Respostas — Aula 2 (Storage & Bancos de Dados)
 
-> **Grupo:** _(preencher: nomes dos integrantes)_
-> **Distribuição do trabalho:** _(preencher: quem fez o quê)_
+> **Grupo:** Yuri Ferreira, Hyago de Melo Rolindo, Priscila Guedes Schlaucher
+> **Distribuição do trabalho:** 
+> - Yuri: 1.1, 1.2, 1.3 - Tipos de Storage, Tiers de acesso, Relacional vs NoSQL
+> - Hyago: 1.4, 2.1, 2.2 - Key Vault, Matriz de dados QC, Plano de migração
+> - Priscila: 2.3, Reflexão - Particionamento no Cosmos DB, Reflexão coletiva
 
 ---
 
