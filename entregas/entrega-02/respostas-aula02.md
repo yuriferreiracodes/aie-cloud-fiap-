@@ -124,8 +124,8 @@ Em qualquer cenário fica **muito abaixo** da quota de 20 GB por partição lóg
 
 ## 💭 Reflexão coletiva
 
-Segregar segredos no Key Vault muda o modelo de segurança porque tira credenciais do código e dos arquivos de config e centraliza o controle em RBAC + Managed Identity. Numa plataforma com agentes (que acessam vários serviços de forma autônoma), isso é crítico: cada agente/serviço recebe só a permissão mínima (ex.: Secrets User só de leitura), os acessos ficam auditáveis, e dá pra rotacionar segredos sem mexer no código. Sem isso, um agente comprometido teria acesso amplo; com isso, o estrago fica contido ao escopo daquela identidade.
+Segregar segredos no Azure Key Vault muda o modelo de segurança porque remove credenciais sensíveis do código, dos arquivos de configuração e dos pipelines, centralizando o acesso em RBAC + Managed Identity.
 
----
+Em uma plataforma com agentes de IA, isso é ainda mais crítico, porque esses agentes podem acessar vários serviços de forma autônoma. Cada agente ou serviço deve receber apenas a permissão mínima necessária, por exemplo Key Vault Secrets User apenas para leitura dos segredos que precisa.
 
-> _N3 (vector search, Synapse, benchmark) é bônus e exige rodar os labs no Azure — não incluído nesta versão._
+Com esse modelo, os acessos ficam auditáveis, a rotação de segredos pode acontecer sem alteração no código, e o impacto de um possível comprometimento fica limitado ao escopo daquela identidade. Sem essa segregação, um agente comprometido poderia expor credenciais amplas; com Key Vault e permissões mínimas, o dano fica contido e rastreável.
